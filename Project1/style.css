@@ -1,0 +1,260 @@
+:root {
+    --fundal: #1e1e1e;
+    --accente: #ff8c00;
+    --text: #ffffff;
+}
+
+body, html {
+    font-family: "Oswald", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background: linear-gradient(to right, grey, #1e1e1e);
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to left, grey, #1e1e1e);
+    box-shadow: 0 0 15px;
+    max-height: 90px;
+    
+}
+
+.logo {
+    font-size: 2rem;
+    padding-left: 3rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px;
+}
+
+.logo span {
+    color: var(--accente);
+    font-size: 2rem;
+}
+
+.logo p {
+    color: var(--text);
+    font-size: 3rem;
+}
+
+.link {
+    padding-right: 3rem;
+    font-size: 2rem;
+}
+
+.link a {
+    padding: 1rem;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px white;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.link a:hover {
+    text-decoration: underline;
+    text-decoration-color: black;
+    opacity: 0.8;
+    font-size: 2rem;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 350px;;
+}
+
+.hero h1 {
+    color: var(--text);
+    font-size: 3rem;
+    text-shadow: 0 0 15px;
+    font-weight: bold;
+}
+
+.hero h3 {
+    color: var(--text);
+    font-size: 1.6rem;
+    text-shadow: 0 0 4px;
+    font-weight: bold;
+}
+.btn button {
+    width: 140px;
+    height: 40px;
+    background: linear-gradient(to right, grey, black);
+    color: var(--text);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+    cursor: pointer;
+    align-self: center;
+}
+.btn button:hover {
+    transform:scale(1.1);
+    background: var(--text);
+    color: var(--fundal);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    padding: 2rem;
+    box-sizing: border-box;
+    transform: scale(1.05);
+    animation: fadeIn 1s ease forwards;
+
+}
+
+.cards .card {
+    display: flex;
+    min-height: 300px;
+    flex-direction: column;
+    max-width: 300px;
+    text-align: center;
+    align-items: center;
+    border: 1px solid black;
+    box-shadow: 0 0 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 165, 0, 0.4);
+    transition: all 0.3s ease-in-out;
+}
+
+.card .ri-settings-3-line {
+    color: var(--accente);
+    font-size: .8rem;
+    align-self: center;
+}
+
+.card h3 {
+    color: var(--text);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.card p {
+    font-weight: bold;
+    color: var(--text);
+}
+
+.card button {
+    margin-top: 15px;
+    background: linear-gradient(to right, white, orange);
+    width: 90px;
+    height: 45px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+}
+
+.card button a {
+    color: var(--fundal);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.card button:hover {
+    transform: scale(1.05);
+    opacity: 0.5;
+}
+
+footer {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    background: linear-gradient(to left, grey, #1e1e1e);
+    height: 13vh;
+}
+
+footer .copyright {
+    text-align: center;
+    margin-left: 30px;
+    color: var(--text);
+    flex: 1;
+}
+
+.copyright p {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.copyright span {
+    font-size: 2rem;
+    color: var(--accente);
+}
+
+.social-link {
+    flex: 1;
+}
+
+.social-link a {
+    margin-left: 1rem;
+    font-size: 1.6rem;
+    color: var(--accente);
+    text-shadow: 0 0 5px;
+}
+
+.social-link a:hover {
+    color: var(--text);
+    transform: scale(1.05);
+}
+
+.motto {
+    flex: 1;
+}
+
+.motto p {
+    color: var(--text);
+    padding-right: 25px;
+    font-size: 1.4rem;
+}
+
+@keyframes fadeIn {
+from { 
+    opacity: 0;
+    transform: translateY(20px); 
+    }
+to { 
+    opacity: 1;
+    transform: translateY(0); 
+}
+}
+
+@media (max-width: 768px) {
+    body {
+        margin: auto;
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+        margin-bottom: 7rem;
+    }
+    a {
+        text-align: center;
+
+    }
+
+}
